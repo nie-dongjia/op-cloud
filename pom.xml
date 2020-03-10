@@ -23,6 +23,7 @@
         <module>op-cloud-settlement-micro-service</module>
         <module>op-cloud-eureka-server</module>
         <module>op-cloud-common</module>
+        <module>op-cloud-gateway</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
