@@ -1,0 +1,24 @@
+server:
+  port: 8001
+  servlet: 
+    context-path: /op-cloud-eureka-server-app
+  tomcat:
+    max-threads: 800
+    uri-encoding: UTF-8
+  error: 
+    path: /error
+  session-timeout: 60    
+   
+   
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/${server.servlet.context-path}/eureka/
+
+      
+logging:
+  config: classpath:logback-dev.xml
