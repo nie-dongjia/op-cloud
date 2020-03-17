@@ -27,7 +27,7 @@ spring:
     port: 6379
     database: 1
     password: Ndj2019!
-    pool: 
+    jedis:
       # 连接池中的最大空闲连接
       max-idle: 100
       # 连接池中的最小空闲连接
@@ -35,9 +35,9 @@ spring:
       # 连接池最大连接数（使用负值表示没有限制）
       max-active: 1000
       # 连接池最大阻塞等待时间（使用负值表示没有限制）
-      max-wait: -1  
+      max-wait: -1
       # 连接超时时间（毫秒）
-      timeout: 0 
+      timeout: 0
     
 eureka:
   client:
@@ -53,3 +53,8 @@ server:
       
 logging:
   config: classpath:logback-prod.xml
+
+#是否激活 swagger true or false
+swagger:
+  is:
+    enable: true

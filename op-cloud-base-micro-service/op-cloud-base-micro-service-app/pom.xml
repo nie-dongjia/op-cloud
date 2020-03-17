@@ -46,6 +46,7 @@
             <artifactId>op-cloud-base-micro-service-api</artifactId>
             <version>${project.version}</version>
         </dependency>
+
     </dependencies>
     <build>
         <finalName>op-cloud-base-micro-service-app</finalName>
