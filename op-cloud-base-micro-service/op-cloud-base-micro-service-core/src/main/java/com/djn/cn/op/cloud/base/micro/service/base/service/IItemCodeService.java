@@ -23,10 +23,10 @@ public interface IItemCodeService extends IBaseService<ItemCode> {
 	 * 
 	 * getByCategory  category 查询 ItemCode 列表
 	 *
-	 * @param Category
+	 * @param category
 	 * @return   
 	 * @since 1.0
 	 * @author op.nie-dongjia
 	 */
-	List<ItemCode>  getByCategory(String Category);
+	List<ItemCode>  getByCategory(String category);
 }

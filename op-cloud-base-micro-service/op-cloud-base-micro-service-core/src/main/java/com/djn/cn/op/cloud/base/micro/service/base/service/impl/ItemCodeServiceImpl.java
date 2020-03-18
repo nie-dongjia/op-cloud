@@ -14,8 +14,9 @@ public class ItemCodeServiceImpl  extends BaseServiceImpl<ItemCode> implements I
 	private ItemCodeMapper itemCodeMapper;
 
 	@Override
-	public List<ItemCode> getByCategory(String Category) {
+	public List<ItemCode> getByCategory(String category) {
 		ItemCode itemCode = new ItemCode();
+		itemCode.setCategory(category);
 		return itemCodeMapper.select(itemCode);
 	}
 }
