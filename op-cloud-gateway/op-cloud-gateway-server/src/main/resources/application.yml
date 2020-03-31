@@ -11,10 +11,12 @@ spring:
     gateway:
       discovery:
         locator:
+          # 是否和服务注册与发现组件结合，设置为 true 后可以直接使用应用名称调用服务
           enabled: true   #表明gateway开启服务注册和发现的功能，并且spring cloud gateway自动根据服务发现为每一个服务创建了一个router，# 这个router将以服务名开头的请求路径转发到对应的服务
           lower-case-service-id: true #将请求路径上的服务名配置为小写（因为服务注册的时候，向注册中心注册时将服务名转成大写的了,比如以/service-hi/*的请求路径被路由转发到服务名为service-hi的服务上
+      # 路由（routes：路由，它由唯一标识（ID）、目标服务地址（uri）、一组断言（predicates）和一组过滤器组成（filters）。filters 不是必需参数。）
       routes:
-      - id: test-id  # 我们自定义的路由 ID，保持唯一
+      - id: test-id  # 我们自定义的路由 ID，保持唯一 简单尝试
         uri:  lb://BASE-MICRO-SERVICE	  # 目标服务地址
         order: -1
         predicates:  # 路由条件
@@ -29,3 +31,6 @@ eureka:
       defaultZone: http://localhost:8001/op-cloud-eureka-server-app/eureka/  # Eureka Server 的注册地址
   instance:
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+
+
+

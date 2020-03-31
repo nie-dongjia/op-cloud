@@ -28,4 +28,6 @@ gateway 中文官方文档
 https://www.jianshu.com/p/6ff196940b67 
 
 
-
+不要引入spring-boot-starter-web包，会导致Gateway启动抛出异常，错误如下。因为Spring Cloud Gateway 是使用 netty+webflux实现，webflux与web是冲突的
+## 比较好的例子
+https://blog.csdn.net/weixin_30342639/article/details/99303710 
